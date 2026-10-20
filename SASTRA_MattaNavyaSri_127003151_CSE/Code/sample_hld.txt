@@ -1,0 +1,30 @@
+SAMPLE AUTOSAR HIGH-LEVEL DESIGN (SYNTHETIC DATA FOR LEARNING)
+Document Version: 1.0
+
+1. Vehicle speed monitoring subsystem
+Component: VehicleSpeedSensor
+Component: SpeedWarning
+Component: InstrumentCluster
+Interface: IVehicleSpeed
+Interface: IWarningStatus
+Port: P_VehicleSpeed
+Port: R_VehicleSpeed
+Signal: VehicleSpeedKph
+Signal: OverspeedWarning
+
+2. Component responsibilities
+The VehicleSpeedSensor component reads the vehicle speed and provides the
+VehicleSpeedKph signal through the IVehicleSpeed interface at P_VehicleSpeed.
+The SpeedWarning component receives VehicleSpeedKph on R_VehicleSpeed and
+compares it with a configured speed threshold.
+If vehicle speed exceeds the threshold, SpeedWarning sends the
+OverspeedWarning signal to InstrumentCluster via IWarningStatus.
+InstrumentCluster displays the warning to the driver.
+
+3. Dependencies and testing
+SpeedWarning depends on VehicleSpeedSensor for updated speed data.
+InstrumentCluster depends on SpeedWarning for the warning status.
+Integration tests should verify nominal speed, threshold crossing, missing
+speed samples, and warning clearing.
+
+This is fictional example content and must not be used for vehicle design approval.

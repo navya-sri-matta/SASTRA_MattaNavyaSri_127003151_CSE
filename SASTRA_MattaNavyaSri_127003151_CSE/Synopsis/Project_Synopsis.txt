@@ -1,0 +1,57 @@
+# CAPSTONE PROJECT SYNOPSIS
+
+**Project Title:** AUTOSAR HLD Document Analysis Assistant
+
+**Student Name:** Matta Navya Sri  
+**Register Number:** 127003151  
+**University:** SASTRA Deemed University  
+**Department:** Computer Science and Engineering
+
+## 1. Abstract
+
+The AUTOSAR HLD Document Analysis Assistant is an AI-assisted application designed to simplify the analysis of automotive High-Level Design (HLD) documents. It combines PDF text extraction, optical character recognition (OCR), semantic search, local language models, and rule-based architecture analysis to help engineers retrieve information and identify important design relationships efficiently.
+
+## 2. Problem Statement
+
+Automotive architecture documents contain extensive technical information. Manual analysis is time-consuming, particularly when identifying software components, interfaces, signals, dependencies, changes between document versions, and possible inconsistencies.
+
+## 3. Objectives
+
+- Extract information from text-based and scanned PDF documents.
+- Provide semantic search and source-supported AI answers.
+- Identify architecture components, interfaces, and signals.
+- Visualize component relationships using dependency graphs.
+- Compare document revisions.
+- Detect potential inconsistencies requiring engineering review.
+
+## 4. Methodology
+
+The application is developed using Python and Streamlit. Uploaded PDFs are processed using PyMuPDF and Tesseract OCR. Document passages are converted into embeddings using Sentence Transformers and stored in ChromaDB.
+
+Relevant passages are retrieved for user queries, and a locally running Ollama language model generates evidence-supported answers.
+
+Separate rule-based modules perform architecture extraction, dependency visualization, revision comparison, and inconsistency detection.
+
+## 5. Technologies Used
+
+Python, Streamlit, PyMuPDF, Tesseract OCR, Sentence Transformers, ChromaDB, Ollama (Llama 3.2 3B), NetworkX, and Plotly.
+
+## 6. Observed Results
+
+During earlier prototype testing:
+
+- A 99-page AUTOSAR reference PDF produced 137 searchable passages.
+- Sample HLD documents supported extraction of architecture entities and signal flows.
+- Revision comparison identified changes between the sample versions.
+- Deliberately inconsistent documents produced warnings.
+- OCR processing extracted text from a scanned test document.
+
+These are prototype functional observations rather than formal accuracy benchmarks.
+
+## 7. Limitations and Future Scope
+
+The application requires human verification of extracted information and AI-generated answers. Future improvements include more comprehensive diagram understanding, improved extraction accuracy, automated testing, and expanded AUTOSAR rule validation.
+
+## 8. Conclusion
+
+The project demonstrates how AI-assisted search, OCR, and architecture analysis can reduce manual effort and improve access to information in complex automotive design documents.

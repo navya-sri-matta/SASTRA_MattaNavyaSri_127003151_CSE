@@ -1,0 +1,36 @@
+AUTOSAR HLD DOCUMENT ANALYSIS ASSISTANT
+EVALUATION RESULTS
+
+Test 1: PDF Document Processing
+Input: AUTOSAR Layered Software Architecture PDF
+Observed: 99 pages processed and 137 searchable passages generated.
+Result: PASS
+
+Test 2: Architecture Extraction
+Input: Sample HLD documents
+Observed: 7 architecture entities and 2 signal-flow relationships identified in the previous project tests.
+Result: PASS
+
+Test 3: Revision Comparison
+Input: HLD_V1.pdf and HLD_V2.pdf
+Observed: 5 text changes identified in the previous project tests.
+Result: PASS
+
+Test 4: Inconsistency Detection
+Input: HLD_Issues_Step20.pdf
+Observed: 4 potential inconsistencies flagged in the previous project tests.
+Result: PASS
+
+Test 5: Valid Document Check
+Input: HLD_Valid_Step20.pdf
+Observed: 0 warnings detected in the previous project tests.
+Result: PASS
+
+Test 6: OCR
+Input: HLD_Scanned_OCR_Test.pdf
+Observed: Scanned-page text extracted in the previous project tests.
+Result: PASS
+
+Notes:
+Results are from earlier prototype demonstrations and should be reproduced and verified using the final submitted code.
+These checks are prototype functional tests, not formal AUTOSAR compliance validation.

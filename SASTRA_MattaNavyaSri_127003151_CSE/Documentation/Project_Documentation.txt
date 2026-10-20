@@ -1,0 +1,56 @@
+# AUTOSAR HLD Document Analysis Assistant
+
+## 1. Project Overview
+
+The AUTOSAR HLD Document Analysis Assistant is a prototype application designed to help automotive engineers analyze High-Level Design (HLD) documents using AI-assisted document search and architecture analysis.
+
+## 2. Problem Statement
+
+AUTOSAR design documents can be lengthy and complex. Manually searching for architecture information, understanding dependencies, comparing revisions, and identifying inconsistencies requires significant time and effort.
+
+## 3. Project Objectives
+
+- Extract text from PDF documents, including scanned pages using OCR.
+- Provide semantic document search and AI-generated answers supported by source references.
+- Identify software components, interfaces, and signals.
+- Visualize relationships and dependencies.
+- Compare document revisions.
+- Flag potential inconsistencies for engineering review.
+
+## 4. Technologies Used
+
+- **Python:** Application development
+- **Streamlit:** Web interface
+- **PyMuPDF:** PDF text extraction
+- **Tesseract OCR:** Scanned-document text recognition
+- **Sentence Transformers:** Semantic embeddings using all-MiniLM-L6-v2
+- **ChromaDB:** Local vector database
+- **Ollama:** Local AI inference using llama3.2:3b
+- **NetworkX and Plotly:** Dependency graph visualization
+
+## 5. Application Workflow
+
+1. The user uploads an AUTOSAR HLD PDF.
+2. Text is extracted using PyMuPDF and OCR where required.
+3. The extracted text is divided into searchable passages with page metadata.
+4. Sentence Transformers generates vector embeddings.
+5. ChromaDB stores and retrieves relevant document passages.
+6. Ollama generates answers using retrieved evidence.
+7. Separate analysis functions extract architecture entities, display dependencies, compare revisions, and flag inconsistencies.
+8. Users review results and export available findings.
+
+## 6. Testing
+
+The prototype was previously tested with a 99-page AUTOSAR reference document, synthetic HLD revision files, deliberate inconsistency examples, and a scanned OCR document.
+
+Test evidence and screenshots are provided in the Evaluation_Results folder.
+
+## 7. Limitations
+
+The prototype uses rule-based architecture extraction and consistency checks, which may not cover every AUTOSAR document format. Complex diagrams may require manual review. AI-generated answers are not guaranteed to be accurate.
+
+The application does not perform formal AUTOSAR compliance certification.
+
+## 8. Conclusion
+
+The AUTOSAR HLD Document Analysis Assistant demonstrates how local AI, semantic search, OCR, and document-analysis techniques can reduce manual effort and make automotive architecture documents easier to understand.

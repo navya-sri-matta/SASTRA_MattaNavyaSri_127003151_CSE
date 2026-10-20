@@ -1,0 +1,33 @@
+PROJECT: AUTOSAR HLD Document Analysis Assistant
+
+AI LANGUAGE MODEL
+Model: llama3.2:3b
+Provider: Ollama
+Execution: Local
+
+EMBEDDING MODEL
+Model: all-MiniLM-L6-v2
+Framework: Sentence Transformers
+Purpose: Convert document passages into embeddings for semantic search.
+
+VECTOR DATABASE
+Database: ChromaDB
+Storage: Local
+Purpose: Store and retrieve relevant document passages.
+
+PDF PROCESSING
+Library: PyMuPDF
+OCR Engine: Tesseract OCR
+
+AI WORKFLOW
+1. Upload an AUTOSAR HLD PDF.
+2. Extract text and perform OCR when required.
+3. Divide the text into searchable passages.
+4. Generate document embeddings.
+5. Retrieve relevant passages using ChromaDB.
+6. Send the retrieved evidence to Ollama.
+7. Generate an answer with source references.
+
+IMPORTANT
+AI-generated answers require engineer verification.
+The application does not provide formal AUTOSAR compliance certification.

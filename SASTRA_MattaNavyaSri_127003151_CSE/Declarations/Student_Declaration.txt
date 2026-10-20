@@ -1,0 +1,22 @@
+# STUDENT DECLARATION
+
+**Project Title:** AUTOSAR HLD Document Analysis Assistant
+
+**Student Name:** Matta Navya Sri  
+**Register Number:** 127003151  
+**University:** SASTRA Deemed University  
+**Department:** Computer Science and Engineering
+
+I hereby declare that the submitted capstone project titled **“AUTOSAR HLD Document Analysis Assistant”** represents the project work carried out as part of my academic coursework.
+
+The submission includes the application source code, sample inputs, project documentation, model configuration, and evaluation results.
+
+I acknowledge that the project uses open-source libraries, AI models, and third-party reference materials, which must be appropriately credited.
+
+I confirm that the information provided in this submission is accurate to the best of my knowledge and that any external contributions or assistance have been appropriately acknowledged.
+
+**Student Signature:** __________________
+
+**Date:** __________________
+
+**Place:** __________________
